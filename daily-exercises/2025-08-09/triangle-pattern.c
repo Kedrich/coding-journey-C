@@ -13,7 +13,7 @@ int main(void)
         for(columns = 1; columns <= 2*number-1; columns++)
         {
             if(columns >= number - (rows-1) && columns <= number+(rows-1))
-            {
+            {   
                 printf("*");
             }
             else
