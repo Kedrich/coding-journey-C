@@ -79,7 +79,7 @@ int main (void)
 }*/
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int isEven(int n)
 {
@@ -99,12 +99,14 @@ int main(void)
 {
     printf("1 = True, 0 = False\n");
 
-    
     int num;
+
     printf("Please enter a number: ");
     scanf("%d", &num);
+    
     printf("%d", isEven(num));
+
     return 0;
 
-}
+}*/
 
