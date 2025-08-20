@@ -1,0 +1,1 @@
+# Im studying ALGEBRA thats why I cant make any commits today.

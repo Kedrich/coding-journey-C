@@ -15,13 +15,13 @@ int main(void)
     printf("Please enter a number: ");
     scanf("%f", &num1);
 
-    //Getting input sa user (number 2)
-    printf("Please enter a number: ");
-    scanf("%f", &num2);
-
     //Getting input sa user (operation to use)
     printf("Please enter the operation that u want to use (+, -, *, /): ");
     scanf(" %c", &operation);
+
+    //Getting input sa user (number 2)
+    printf("Please enter a number: ");
+    scanf("%f", &num2);
 
     //if-else condition para sa calculator type shi
     if (operation == '+')
