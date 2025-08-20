@@ -23,7 +23,7 @@ int main(void)
     }
 
     printf("Value for SUM: %d\n", sum);
-    printf("Value of mean: %d", sum/count);
+    printf("Value of mean: %d (Rounded off to the nearest whole number)", sum/count);
 
     return 0;
 }
