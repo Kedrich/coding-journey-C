@@ -8,15 +8,15 @@ int main(void)
     int factor = 3;
     int original;
     
-    original = multiply_by_factor(&num, factor);  // Capture return value
-    printf("Original: %d, Modified: %d", original, num);  // Fix format string
+    original = multiply_by_factor(&num, factor);  
+    printf("Original: %d, Modified: %d", original, num);  
     
-    return 0;  // Add return statement
+    return 0;
 }
 
 int multiply_by_factor (int *num, int factor)
 {
-    int original = *num;        // Store original value
-    *num = (*num) * factor;     // Multiply pointed value by factor
-    return original;            // Return original value
+    int original = *num;        
+    *num = (*num) * factor;     
+    return original;            
 }
