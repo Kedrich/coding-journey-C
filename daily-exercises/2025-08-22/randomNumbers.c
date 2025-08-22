@@ -22,7 +22,7 @@ int main(void)
 
     printf("Please enter your guess number: ");
     scanf("%d", &guess);
-    count++; // Count the first guess
+    count++; 
     
     while(guess != result)
     {
@@ -34,15 +34,14 @@ int main(void)
         {
             printf("Too high! Try again.\n");
         }
-        // Note: We don't need the else if (result == guess) here 
-        // because the while condition already checks this
+
 
         printf("Please enter your guess number: ");
         scanf("%d", &guess);
-        count++; // Count each guess
+        count++; 
     }
     
-    // This runs when guess == result (loop exits)
+
     printf("That's correct! The number was %d\n", result);
     printf("Congratulations! You won the Guessing Game in %d attempts!\n", count);
 
