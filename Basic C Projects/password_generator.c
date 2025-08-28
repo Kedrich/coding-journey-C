@@ -164,6 +164,13 @@ ValidationResult validate_inputs(int length, PasswordOptions options)
     return result;
 }
 
+CharacterSets build_character_sets(PasswordOptions options)
+{
+    CharacterSets sets;
+    sets.set_count = 0;
+    set.all_chars = "";
+}
+
 
 
 void handle_errors(int error_code)
