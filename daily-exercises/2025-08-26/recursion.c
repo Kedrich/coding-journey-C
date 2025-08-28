@@ -1,20 +1,17 @@
 #include <stdio.h>
 
-void countdown(int n)
+void countdown (int n) //5
 {
-
-    if (n <= 0)
+    if (n == 0)
     {
-        printf("Blass Off!\n");
+        printf("Blast Off!");
         return;
     }
-
     printf("%d\n", n);
-    countdown(n-1);
-
+    countdown(n - 1);
 }
 
-int main()
+int main(void)
 {
     countdown(5);
     return 0;

@@ -19,7 +19,7 @@ int main(void)
     return 0;
 }
 
-/*  fun(4)
-    fun(2) = 9
-    fun(0) = 7
-    return 1*/
+/*  fun(4) = 7
+    fun(2) = 7
+    fun(0) = 1
+    7 + 7 + 1 = 15*/

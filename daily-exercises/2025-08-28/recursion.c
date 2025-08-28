@@ -19,4 +19,6 @@ int fun(int n)
     {
         return 1 + fun(n-1);
     }
+
+    /**/
 }
