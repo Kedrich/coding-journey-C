@@ -14,9 +14,9 @@ int factorial (int n)
 
 int main(void)
 {
-    unsigned long long int number;
+    int number;
     printf("Please enter a number: ");
-    scanf("%lld", &number);
-    printf("%lld", factorial(number));
+    scanf("%d", &number);
+    printf("%d", factorial(number));
     return 0;
 }

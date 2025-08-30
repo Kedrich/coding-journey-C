@@ -33,7 +33,8 @@ char get_secure_random_char(char* char_set);
 void secure_array_shuffle(char array[], int length);
 void handle_errors(int error_code);
 PasswordStrength calculate_strength(char* password);  
-void display_menu();                              
+void display_menu();      
+char *generate_secure_password(int length, PasswordOptions options, char* output_password);                        
 
 
 int main(void)
@@ -169,6 +170,18 @@ CharacterSets build_character_sets(PasswordOptions options)
     CharacterSets sets;
     sets.set_count = 0;
     set.all_chars = "";
+}
+
+char *generate_secure_password(int length, PasswordOptions options, char* output_password)
+{
+    int length;
+    PasswordOptions options;
+
+    ValidationResult validation = validate_inputs(length, options);
+    if (validation.is_valid == false)
+    {
+        return handle_errors(validation.error_code);
+    }
 }
 
 
