@@ -17,3 +17,5 @@ int main(void)
     printf("%d", fun(27));
     return 0;
 }
+
+
