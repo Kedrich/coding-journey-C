@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <time.h>
 
-// Structure definitions
+
 typedef struct {
     bool include_uppercase;
     bool include_lowercase;
@@ -34,7 +34,7 @@ typedef struct {
     char color[8];
 } PasswordStrength;
 
-// Function declarations
+
 int generate_password_flow(int length, PasswordOptions options, char output[]);
 ValidationResult validate_inputs(int length, PasswordOptions options);
 CharacterSets build_character_sets(PasswordOptions options);
@@ -49,10 +49,9 @@ void free_character_sets(CharacterSets* sets);
 
 int main(void)
 {
-    // Seed random number generator
+
     srand((unsigned int)time(NULL));
-    
-    // Default options
+
     PasswordOptions options = {true, true, true, false, false};
     char password[129];
     int choice, length;
@@ -64,12 +63,12 @@ int main(void)
         
         if (scanf("%d", &choice) != 1) {
             printf("Invalid input. Please enter a number.\n");
-            while (getchar() != '\n'); // Clear input buffer
+            while (getchar() != '\n'); 
             continue;
         }
         
         switch (choice) {
-            case 1: // Generate password
+            case 1: 
                 printf("Enter password length (4-128): ");
                 if (scanf("%d", &length) != 1) {
                     printf("Invalid length input.\n");
@@ -86,12 +85,12 @@ int main(void)
                 }
                 break;
                 
-            case 2: // Configure options
+            case 2:
                 options = get_user_options();
                 printf("Options updated successfully!\n");
                 break;
                 
-            case 3: // Exit
+            case 3:
                 printf("Thank you for using Password Generator. Goodbye!\n");
                 return 0;
                 
@@ -100,8 +99,8 @@ int main(void)
         }
         
         printf("\nPress Enter to continue...");
-        while (getchar() != '\n'); // Clear buffer
-        getchar(); // Wait for Enter
+        while (getchar() != '\n'); 
+        getchar(); /
     }
     
     return 0;
@@ -123,7 +122,6 @@ int generate_password_flow(int length, PasswordOptions options, char output[])
     char password_array[129] = {0};
     int position = 0;
 
-    // Ensure at least one character from each required type
     if (options.include_uppercase && character_sets.uppercase != NULL) {
         password_array[position++] = get_secure_random_char(character_sets.uppercase); 
     }
@@ -140,7 +138,6 @@ int generate_password_flow(int length, PasswordOptions options, char output[])
         password_array[position++] = get_secure_random_char(character_sets.special);
     }
 
-    // Fill remaining positions
     while (position < length) {
         char random_char = get_secure_random_char(character_sets.all_chars);
 
@@ -160,14 +157,11 @@ int generate_password_flow(int length, PasswordOptions options, char output[])
         position++;
     }
 
-    // Shuffle the password
     secure_array_shuffle(password_array, length);
 
-    // Copy to output
     password_array[length] = '\0';
     strcpy(output, password_array);
 
-    // Clean up memory
     free_character_sets(&character_sets);
     
     return 0;
@@ -216,25 +210,25 @@ CharacterSets build_character_sets(PasswordOptions options)
     CharacterSets sets;
     sets.set_count = 0;
     
-    // Initialize all pointers to NULL
+
     sets.uppercase = NULL;
     sets.lowercase = NULL;
     sets.numbers = NULL;
     sets.special = NULL;
     sets.all_chars = NULL;
     
-    // Base character sets
+
     char base_upper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     char base_lower[] = "abcdefghijklmnopqrstuvwxyz";
     char base_numbers[] = "0123456789";
     char base_special[] = "!@#$%^&*()_+-=[]{}|;:,.<>?";
     
-    // Allocate memory for all_chars (worst case: all sets combined)
+
     sets.all_chars = (char*)malloc(200 * sizeof(char));
     if (sets.all_chars == NULL) return sets;
     sets.all_chars[0] = '\0';
     
-    // Build character sets based on options
+
     if (options.include_uppercase) {
         sets.uppercase = (char*)malloc((strlen(base_upper) + 1) * sizeof(char));
         if (sets.uppercase != NULL) {
@@ -287,11 +281,11 @@ char get_secure_random_char(char* char_set)
 
 void secure_array_shuffle(char array[], int length)
 {
-    // Fisher-Yates shuffle algorithm
+
     for (int i = length - 1; i > 0; i--) {
         int j = rand() % (i + 1);
         
-        // Swap elements
+
         char temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -305,12 +299,11 @@ PasswordStrength calculate_strength(char* password)
     
     int length = strlen(password);
     
-    // Length scoring
+
     if (length >= 8) strength.score++;
     if (length >= 12) strength.score++;
     if (length >= 16) strength.score++;
-    
-    // Character variety analysis
+
     bool has_upper = false, has_lower = false, has_numbers = false, has_special = false;
     
     for (int i = 0; i < length; i++) {
@@ -326,7 +319,7 @@ PasswordStrength calculate_strength(char* password)
     if (has_numbers) strength.score++;
     if (has_special) strength.score += 2;
     
-    // Determine strength level
+
     if (strength.score <= 3) {
         strcpy(strength.level, "Weak");
         strcpy(strength.color, "red");
