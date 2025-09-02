@@ -1,26 +1,29 @@
 #include <stdio.h>
 
+#define ELEMENT 5
+
 int main(void)
 {
-    int arr[7] = {45, 12, 78, 23, 67, 89, 34};
-    int max = arr[0];   // start with the first element
-    int min = arr[0];   // same for minimum
+    int arr[ELEMENT];
 
-    for(int i = 1; i < 7; i++)   // loop from index 1 to 6
+    printf("Enter 5 Numbers:\n");
+    for(int i = 0; i < ELEMENT; i++)
     {
-        if(arr[i] > max)
-        {
-            max = arr[i];  // update max if a bigger value is found
-        }
-        if(arr[i] < min)
-        {
-            min = arr[i];  // ✅ fix: update min here
-        }
+        printf("Enter number %d: ", i + 1);
+        scanf("%d", &arr[i]);
     }
 
+    printf("Here are the array of 5 numbers: \n");
+    for(int i = 0; i < ELEMENT; i++)
+    {
+        printf("Element %d: %d\n", i, arr[i]);
+    }
 
-    printf("The Maximum number is %d\n", max);
-    printf("The Minimum number is %d\n", min);
+    printf("Here are the reversed array of the 5 numbers: \n");
+    for(int i = ELEMENT - 1; i >= 0; i--)
+    {
+        printf("Element %d: %d\n", i, arr[i]);
+    }
 
     return 0;
 }
