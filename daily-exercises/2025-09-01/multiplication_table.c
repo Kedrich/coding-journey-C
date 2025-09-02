@@ -14,6 +14,5 @@ int main(void)
         printf("%d x %d = %d\n", number, count, product);
     }
 
-
     return 0;
 }
