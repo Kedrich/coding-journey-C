@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//Calculating the SIZE of arr multidimdensional arrays.
+
 int main(void)
 {
 
