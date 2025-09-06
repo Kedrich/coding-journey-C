@@ -36,7 +36,7 @@ int main(void)
     printf("Please enter the size of the array (1-100): ");
     scanf("%d", &n);
 
-    if(n < 100 && n > 1)
+    if(n <= 100 && n >= 1)
     {
         int arr[n];
         for(int i = 0; i < n; i++)
