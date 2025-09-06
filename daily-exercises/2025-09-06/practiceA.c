@@ -2,13 +2,13 @@
 
 void findtheMAX(int array[])
 {
-    int max = array[0];  // Start with first element as max
+    int max = array[0];  
     
-    for(int i = 1; i < 5; i++)  // Start from index 1
+    for(int i = 1; i < 5; i++) 
     {
-        if(array[i] > max)  // Compare with current max, not index
+        if(array[i] > max)  
         {
-            max = array[i];  // Update max if we find bigger value
+            max = array[i];  
         }
     }
     
