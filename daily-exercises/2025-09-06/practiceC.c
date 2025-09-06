@@ -3,7 +3,7 @@
 float arrayAvarage(int array[], int n)
 {
     float average;
-    int sum;
+    int sum = 0;
 
 
     for(int i = 0; i < n; i++)
