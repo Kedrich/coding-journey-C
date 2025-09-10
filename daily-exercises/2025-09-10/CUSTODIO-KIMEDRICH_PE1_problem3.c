@@ -2,7 +2,7 @@
 
 float totalbillCalculation(float amount, float tip)
 {
-    float total_bill = amount + (amount / tip);
+    float total_bill = amount + (amount * (tip/100));
     return total_bill;
 }
 
@@ -30,7 +30,5 @@ int main()
     printf("Total bill including tip: $%.2f\n", total_bill);
     printf("Each person should pay: $%.2f", payment_per_person);
     
-    
-
     return 0;
 }
