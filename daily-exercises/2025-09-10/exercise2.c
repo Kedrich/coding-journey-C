@@ -22,22 +22,27 @@ float areaCalculation(float a, float b, float c, float semiperimeter)
 
 int main(void)
 {
-    int a,b,c;
+    float a,b,c;
 
     printf("Please enter the value of A: ");
-    scanf("%d", &a);
+    scanf("%f", &a);
     printf("Please enter the value of B: ");
-    scanf("%d", &b);
+    scanf("%f", &b);
     printf("Please enter the value of C: ");
-    scanf("%d", &c);
+    scanf("%f", &c);
+
+    if(a + b <= c || a + c <= b || b + c <= a) { //To check if the triangle is valid or not.
+        printf("Invalid triangle sides.\n");
+        return 1;
+    }
 
     int perimeter = perimeterCalculation(a,b,c);
     printf("Perimeter = %d m\n", perimeter);
 
     float semiperimeter = semiperimeterCalculation(a,b,c);
 
-    int area = areaCalculation(a,b,c,semiperimeter);
-    printf("Area = %d sq.m.", area);
+    float area = areaCalculation(a,b,c,semiperimeter);
+    printf("Area = %.2f sq.m.", area);
 
     return 0;
 }
