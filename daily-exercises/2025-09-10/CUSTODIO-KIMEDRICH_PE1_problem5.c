@@ -70,7 +70,15 @@ int main(void)
 
     printf("\n");
 
+    if (receive < payable)
+    {
+        printf("Error: received amount must be less than payable amount.\n");
+        return 1;
+    }
+
     int change = changeCalculation(payable, receive);
+
+    printf("The total amount of change: %d\n", change);
 
     int thousand = thousandBillCalculation(change);
     change = change - (thousand * 1000);
@@ -99,14 +107,15 @@ int main(void)
     int one = oneCalculation(change);
     change = change - (one * 1);
 
-    printf("1000: %d\n", thousand);
-    printf("500: %d\n", fivehundred);
-    printf("200: %d\n", twohundred);
-    printf("100: %d\n", onehundred);
-    printf("50: %d\n", fifty);
-    printf("20: %d\n", twenty);
-    printf("10: %d\n", ten);
-    printf("5: %d\n", five);
-    printf("1: %d\n", one);
+    
+    printf("Number of 1000 bills: %d\n", thousand);
+    printf("Number of 500 bills: %d\n", fivehundred);
+    printf("Number of 200 bills: %d\n", twohundred);
+    printf("Number of 100 bills: %d\n", onehundred);
+    printf("Number of 50 bills: %d\n", fifty);
+    printf("Number of 20 bills: %d\n", twenty);
+    printf("Number of 10 coins: %d\n", ten);
+    printf("Number of 5 coins: %d\n", five);
+    printf("Number of 1 coins: %d\n", one);
 
 }
