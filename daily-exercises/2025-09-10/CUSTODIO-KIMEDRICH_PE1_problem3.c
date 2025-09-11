@@ -6,7 +6,7 @@ float totalbillCalculation(float amount, float tip)
     return total_bill;
 }
 
-float paymentPerPerson(float total_bill, float people)
+float paymentPerPerson(float total_bill, int people)
 {
     float payment_per_person = total_bill / people;
     return payment_per_person;
@@ -15,14 +15,15 @@ float paymentPerPerson(float total_bill, float people)
 int main()
 {
 
-    float amount, tip, people;
+    float amount, tip;
+    int people;
 
     printf("Enter the bill amount: $");
     scanf("%f", &amount);
     printf("Enter the tip percentage: ");
     scanf("%f", &tip);
     printf("Enter the number of people/s: ");
-    scanf("%f", &people);
+    scanf("%d", &people);
 
     float total_bill = totalbillCalculation(amount, tip);
     float payment_per_person = paymentPerPerson(total_bill, people);
