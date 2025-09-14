@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 void make_positive(int *ptr)
 {
