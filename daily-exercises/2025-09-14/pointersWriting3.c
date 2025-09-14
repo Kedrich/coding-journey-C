@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/*
 void copy_value(int *ptr1, int *ptr2)
 {
     *ptr1 = *ptr2;
@@ -18,7 +19,7 @@ int main(void)
 
     return 0;
 }
-
+*/
 
 /*
 
