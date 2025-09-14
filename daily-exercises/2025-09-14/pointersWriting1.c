@@ -2,6 +2,7 @@
 
 int main(void)
 {
+    //LEVEL 1
 
     /*
     
@@ -12,6 +13,10 @@ int main(void)
 
     printf("%d", *ptr);*/
 
+    /*
+    
+    PROBLEM 2
+
     int score = 100;
     int *ptr = &score;
 
@@ -19,6 +24,8 @@ int main(void)
 
     *ptr = 85;
     printf("%d", *ptr);
+    
+    */
 
     return 0;
 }
