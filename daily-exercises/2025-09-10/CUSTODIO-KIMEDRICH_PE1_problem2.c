@@ -31,11 +31,6 @@ int main(void)
     printf("Please enter the value of C: ");
     scanf("%f", &c);
 
-    if(a + b <= c || a + c <= b || b + c <= a) { //To check if the triangle is valid or not.
-        printf("Invalid triangle sides.\n");
-        return 1;
-    }
-
     int perimeter = perimeterCalculation(a,b,c);
     printf("Perimeter = %d m\n", perimeter);
 
