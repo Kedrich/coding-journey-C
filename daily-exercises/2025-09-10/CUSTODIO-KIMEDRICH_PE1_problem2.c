@@ -3,13 +3,21 @@
 
 int main(void)
 {
+    float a,b,c;
 
-    float a, b, c;
-    
-    printf("Please input values for the 3 sides (in meters): ");
-    scanf("%f %f %f", &a, &b, &c);
+    printf("Please enter the value of A: ");
+    scanf("%f", &a);
+    printf("Please enter the value of B: ");
+    scanf("%f", &b);
+    printf("Please enter the value of C: ");
+    scanf("%f", &c);
 
-    int perimeter = a + b + c;
+    if(a + b <= c || a + c <= b || b + c <= a) { //To check if the triangle is valid or not.
+        printf("Invalid triangle sides.\n");
+        return 1;
+    }
+
+    int perimeter = perimeterCalculation(a,b,c);
     printf("Perimeter = %d m\n", perimeter);
 
     float semiperimeter = (a + b + c) / 2;
