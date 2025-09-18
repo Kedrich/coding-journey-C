@@ -1,10 +1,8 @@
 #include <stdio.h>
 
-int findMid(int a, int n)
+int *findMid(int a[], int n)
 {
-    int mid;    
-
-
+    return &a[n/2];
 }
 
 int main(int argc, char const *argv[])
