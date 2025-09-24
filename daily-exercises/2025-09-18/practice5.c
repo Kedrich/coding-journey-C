@@ -3,6 +3,7 @@
 int sumFirstTwo(int arr[])
 {
     return *arr + *(arr + 1); 
+    
 }
 
 
@@ -18,8 +19,8 @@ int main(void)
     }
 
     int sumoftwo = sumFirstTwo(arr);
-    printf("%d", sumoftwo);
-    
+    printf("%d\n", sumoftwo);
+
 
     return 0;
 }
