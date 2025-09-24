@@ -3,7 +3,14 @@
 int main(void)
 {
     int a[] = {11, 22, 36, 5, 2};
-    printf("%d", *(a+1));
+    int sum = 0, *p;
+
+    for(p = a; p <= a+4; p++)
+    {
+        sum += *p;
+    }
+
+    printf("%d", sum);
 
     return 0;
 }
