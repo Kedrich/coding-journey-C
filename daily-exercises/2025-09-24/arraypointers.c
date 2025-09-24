@@ -2,9 +2,8 @@
 
 int main(void)
 {
+    int a[] = {11, 22, 36, 5, 2};
+    printf("%d", *(a+1));
 
-    int a[5];
-    *(a+1)= 20;
-    printf("%d", a[1]);
     return 0;
 }
