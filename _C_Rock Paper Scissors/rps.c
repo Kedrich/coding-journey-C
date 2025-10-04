@@ -4,7 +4,7 @@
 #include <string.h>
 
 char* displayMenu(int);
-int getPlayerChoice(void);
+int getPlayerChoice(void);  
 int getComputerChoice(void);
 char* determineWinner(int, int);
 void displayResults(int, int, char*);

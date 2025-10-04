@@ -3,9 +3,15 @@
 int main(void)
 {
 
-    int a[5];
-    *a = 10;
-    printf("%d", a[0]);
+    int arr[] = {1,2,3,4,5};
+    int sum = 0, *p;
+
+    for(p = &arr[0]; p <= &arr[4]; p++)
+    {
+        sum += *p;
+    }
     
+    printf("%d", sum);
+
     return 0;
 }
