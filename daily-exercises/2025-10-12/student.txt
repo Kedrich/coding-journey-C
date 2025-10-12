@@ -1,1 +1,6 @@
-101 Juan 85
+Student ID: 101 Student Name: Juan Student Grade: 85.50
+Student ID: 102 Student Name: Maria Student Grade: 92.00
+Student ID: 103 Student Name: Pedro Student Grade: 88.50
+Student ID: 104 Student Name: Kim Student Grade: 99.00
+Student ID: 105 Student Name: Darian Student Grade: 100.00
+Average Grade: 93.00
