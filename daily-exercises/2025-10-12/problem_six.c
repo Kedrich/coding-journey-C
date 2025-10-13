@@ -35,8 +35,6 @@ int main(void)
     fprintf(student_file, "Student ID: %d Student Name: %s Student Grade: %.2f\n", ID5, name5, grade5);
     fprintf(student_file, "Average Grade: %.2f", average_grade);
 
-
-
     fclose(student_file);
 
     return 0;
