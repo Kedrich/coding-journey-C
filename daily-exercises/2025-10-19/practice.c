@@ -4,15 +4,9 @@
 int main(void)
 {
     
-    int a[] = {1,2,3,4,5,6};
-    int *p = &a[3];
-    int *q = &a[5];
-    printf("%d\n", p);
-    printf("%d\n", q);
-    printf("%d\n", p <= q);
-    printf("%d\n", p >= q);
-    q = &a[3];
-    printf("%d", p==q);
+    int a[] = {11, 22, 36, 5, 2};
+    
+    printf("%d", *(a+2));
     
     return 0;
 }
