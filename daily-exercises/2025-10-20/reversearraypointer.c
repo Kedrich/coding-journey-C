@@ -7,6 +7,7 @@ int main(void)
 
     int a[N], *p;
 
+    printf("Enter %d elemenets in the array: ", N);
     for(p = a; p <= a+N-1; p++)
     {
         scanf("%d", p);
