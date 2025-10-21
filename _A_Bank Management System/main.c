@@ -18,6 +18,5 @@ void account(void)
     char password[20];
     int passwordlength, i, seek = 0;
     char ch;
-    FILE *fp, *fu;
 
 }
