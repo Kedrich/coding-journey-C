@@ -1,17 +1,18 @@
 #include <stdio.h>
 
+#define ARRAY_LENGTH (int)(sizeof(a) / sizeof(a[0]))
+
 int main(void)
 {
     int a[10];
     int i;
-    int length = (int)(sizeof(a) / sizeof(a[0]));
 
-    printf("Enter %d numbers: ", length);
-    for (i = 0; i < length; i++)
+    printf("Enter %d numbers: ", ARRAY_LENGTH);
+    for (i = 0; i < ARRAY_LENGTH; i++)
         scanf("%d", &a[i]);
 
     printf("In reverse order: ");
-    for (i = length - 1; i >= 0; i--)
+    for (i = ARRAY_LENGTH - 1; i >= 0; i--)
         printf("%d ", a[i]);
 
     printf("\n");
