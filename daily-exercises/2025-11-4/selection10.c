@@ -7,6 +7,12 @@ int main(void)
     printf("Please enter the number of item/s you purchased: ");
     scanf("%d", &items);
 
+    if (items < 0)
+    {
+        printf("Please enter a valid value.");
+        return 0;
+    }
+
     if (items > 10)
     {
         printf("Discount.");
