@@ -2,6 +2,9 @@
 
 int main(void)
 {
+
+    printf("***BMI Calculator with Health Categories***\n\n");
+
     char name[99];
     float weight, height, bmi;
 

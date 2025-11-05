@@ -3,6 +3,8 @@
 int main(void)
 {
 
+    printf("***Triangle Type Identifier***\n\n");
+
     int side1, side2, side3;
     printf("Enter side 1: "); 
     scanf("%d", &side1);

@@ -2,6 +2,9 @@
 
 int main(void)
 {
+
+    printf("***Electricity Bill Calculator***\n\n");
+
     char name[99];
     int power_consumption;
     float electricity_bill = 0;

@@ -2,6 +2,9 @@
 
 int main(void)
 {
+
+    printf("***Gym Membership Discount***\n\n");
+
     int age, type;
     float price;
 
