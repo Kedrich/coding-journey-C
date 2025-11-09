@@ -8,14 +8,14 @@ int main(void)
     scanf("%d", &n);
 
     int arr[n], *p, i;
-    for(p = &arr[0], i = 1;p < &arr[n]; p++,  i++)
+    for(p = arr, i = 1;p < arr + n; p++,  i++)
     {
         printf("Enter element %d: ", i);
         scanf("%d", p);
     }
 
     int sum  = 0;
-    for(p = &arr[0]; p < &arr[n]; p++)
+    for(p = arr; p < arr + n; p++)
     {
         sum += *p;
     }

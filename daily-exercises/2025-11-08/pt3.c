@@ -3,21 +3,23 @@
 int main(void)
 {
 
-    int row, column;
-    printf("Enter the size of rows of the array: "); 
-    scanf("%d", &row);
-    printf("Etner the size of column of the array: ", &column);
-    scanf("%d", &column);
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
 
-    int array[row][column], *p, count_row, count_column;
-    for(p = &array[0][0], count_row = 1; p < &array[row][column]; p++, count_row++)
+    int arr[n], *p, count;
+
+    for(p = arr, count = 1; p < arr + n; p++, count++)
     {
-        for(p = &array[0][0], count_column = 1; p < &array[row][column]; p++, count_column++)
-        {
-            scanf("%d", p);
-        }
+        printf("Enter element %d: ", count);
+        scanf("%d", p);
     }
 
+    printf("Reversed array: \n");
+    for(p = arr + (n-1); p >= arr; p--)
+    {
+        printf("%d ", *p);
+    }
 
     return 0;
 }
