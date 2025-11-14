@@ -5,11 +5,11 @@ void positionFinder(int array[], int n, int findNumber)
     int found = 0;
 
     printf("Positions: ");
-    for (int i = 0; i < n; i++)  // loop 0 to n-1
+    for (int i = 0; i < n; i++)  
     {
         if (array[i] == findNumber)
         {
-            printf("%d ", i + 1);  // show position (1-based)
+            printf("%d ", i + 1);  
             found = 1;
         }
     }

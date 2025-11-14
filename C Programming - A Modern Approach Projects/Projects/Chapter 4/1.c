@@ -8,7 +8,7 @@ int main(void)
 
     int reversed = (n % 10) * 10 + (n / 10);
 
-    printf("The reversal is: %d\n", reversed);
+    printf("The reversal is: %02d\n", reversed);
 
     return 0;
 }
